@@ -5,7 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Saleh</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/aee7492759.js" crossorigin="anonymous"></script></head>
+    <script src="https://kit.fontawesome.com/aee7492759.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "Icp1xk9l7iS3qDKbA",
+      });
+   })();
+</script>
+</head>
 <body>
     <section id="landing-page">
         <nav>
@@ -108,18 +120,18 @@
                 <h4 class="modal__sub-title modal__sub-title--contact">
                     I'm currently open to new opportunites.
                 </h4>
-                <form id="contact__form" action="">
+                <form id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
                         <label class="form__item--label">Name</label>
-                        <input class="input" name="user_name" type="text" required></input>
+                        <input class="input" name="user_name" type="text" ></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Email</label>
-                        <input class="input" name="user_email" type="email" required></input>
+                        <input class="input" name="user_email" type="email"></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Message</label>
-                        <textarea class="input" name="message" type="text" required></textarea>
+                        <textarea class="input" name="message" type="text"></textarea>
                     </div>
                     <button id="contact__submit" class="form__submit">
                         Send it my way
